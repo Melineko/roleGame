@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EC34C73266290A300E4ECBC /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC34C72266290A300E4ECBC /* Characters.swift */; };
+		8EC34C7726629E1000E4ECBC /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC34C7626629E1000E4ECBC /* Weapon.swift */; };
 		8EDD2FE4265BE334009FE51A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2FE3265BE334009FE51A /* main.swift */; };
 		8EDD2FEB265BE4DA009FE51A /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EDD2FEA265BE4DA009FE51A /* Game.swift */; };
 /* End PBXBuildFile section */
@@ -24,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8EC34C72266290A300E4ECBC /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		8EC34C7626629E1000E4ECBC /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		8EDD2FE0265BE334009FE51A /* roleGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = roleGame; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDD2FE3265BE334009FE51A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8EDD2FEA265BE4DA009FE51A /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 			children = (
 				8EDD2FE3265BE334009FE51A /* main.swift */,
 				8EDD2FEA265BE4DA009FE51A /* Game.swift */,
+				8EC34C72266290A300E4ECBC /* Characters.swift */,
+				8EC34C7626629E1000E4ECBC /* Weapon.swift */,
 			);
 			path = roleGame;
 			sourceTree = "<group>";
@@ -123,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EDD2FE4265BE334009FE51A /* main.swift in Sources */,
+				8EC34C7726629E1000E4ECBC /* Weapon.swift in Sources */,
+				8EC34C73266290A300E4ECBC /* Characters.swift in Sources */,
 				8EDD2FEB265BE4DA009FE51A /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
