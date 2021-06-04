@@ -6,7 +6,10 @@
 //
 
 import Foundation
+
+//== CLASSE ARME ==
 class Weapon {
+    // == propriétés ==
     var name : String
     var damage :Int
     
@@ -16,6 +19,4 @@ class Weapon {
     }
 }
 
-sword = Weapon(name: "Sword", damage: 35)
-sword.name
 

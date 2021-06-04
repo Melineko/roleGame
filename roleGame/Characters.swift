@@ -7,7 +7,9 @@
 
 import Foundation
 
+//== CLASSE PERSONNAGE ==
 class Character {
+    //propriétés
     var name :String
     var life :Int
     var weaponType : Weapon
@@ -16,9 +18,18 @@ class Character {
         self.name = name
         self.life = life
     }
-    
-    func attack (){
+    //méthode
+    /*func attack (){
         life -= weaponType.damage
-    }
+    }*/
     
 }
+//-- sous-classe de PERSONNAGE : PIRATE--
+class pirateType : Character {
+    
+}
+//instance de pirate
+var pirate = pirateType(name:String, life: 150)
+
+
+
