@@ -10,10 +10,10 @@ import Foundation
 //== CLASSE ARME ==
 class Weapon {
     // == propriétés ==
-    var name : String
-    var damage :Int
+    var name: String
+    var damage: Int
     
-    init(name:String, damage:Int){
+    init(name: String, damage: Int) {
         self.name = name
         self.damage = damage
     }
