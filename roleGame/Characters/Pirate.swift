@@ -16,8 +16,5 @@ class Pirate: Character {
         super.init(name: "Pirate", life: 90, strength: 0, weapon: Sword())
     }
     
-    override func actionOn() {
-       
-    }
     
 }

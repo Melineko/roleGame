@@ -23,11 +23,15 @@ class Character {
     }
     
     func actionOn() {
+        // une source et une cible
+        let characterGiver: Character
+        let characterReceiver: Character
+        
         // Action fight
         func fight(){
-            // une source et une cible
-            life-=weapon.damage }
-        // or heal
+            characterReceiver.life-=characterGiver.weapon.damage }
+        
+        // or heal ___ seulement mage et sorcière
     }
     
 }

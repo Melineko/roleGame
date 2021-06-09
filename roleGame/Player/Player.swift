@@ -6,20 +6,20 @@
 //
 
 import Foundation
+
 // CLASSE JOUEUR //
 class Player {
-    let name : String
+    let name: String
     var characters: [Character] = []
     
     init (name: String){
         self.name = name
     }
     
-    // init an empty array and append the content
+    // initialisation du tableau
     /*init (name: String, characters: [Character]){
         self.name = name
         self.characters = [Character]()
-        self.characters.append(contentsOf: characters)
     }*/
 
 }

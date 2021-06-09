@@ -16,8 +16,5 @@ class Jailer: Character {
         super.init(name: "Géolier", life: 120, strength: 0, weapon: Canonball())
     }
     
-    override func actionOn() {
-       
-    }
     
 }
