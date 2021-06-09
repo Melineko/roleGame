@@ -23,7 +23,11 @@ class Character {
     }
     
     func actionOn() {
-        // Action fight or heal
+        // Action fight
+        func fight(){
+            // une source et une cible
+            life-=weapon.damage }
+        // or heal
     }
     
 }
