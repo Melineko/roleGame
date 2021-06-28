@@ -9,12 +9,10 @@ import Foundation
 
 //-- sous-classe de PERSONNAGE : PIRATE--
 class Pirate: Character {
-    var customName: String
     
-    init(customName: String) {
-        self.customName = customName
-        super.init(name: "Pirate", life: 90, strength: 0, weapon: Sword())
+    init() {
+        super.init(name: "Pirate", life: 90, weapon: Sword())
+        
     }
-    
-    
+        
 }

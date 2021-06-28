@@ -7,13 +7,11 @@
 
 import Foundation
 
-//-- sous-classe de PERSONNAGE : PIRATE--
+//-- sous-classe de PERSONNAGE : GEOLIER--
 class Jailer: Character {
-    var customName: String
     
-    init(customName: String) {
-        self.customName = customName
-        super.init(name: "Géolier", life: 120, strength: 0, weapon: Canonball())
+    init() {
+        super.init(name: "Géolier", life: 120, weapon: Canonball())
     }
     
     

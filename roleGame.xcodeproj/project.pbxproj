@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8E538D6D266FC5B000943AD1 /* Witch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D6C266FC5B000943AD1 /* Witch.swift */; };
 		8E538D71266FC5E200943AD1 /* Jailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D70266FC5E200943AD1 /* Jailer.swift */; };
-		8E538D73266FC62700943AD1 /* Fichman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D72266FC62700943AD1 /* Fichman.swift */; };
-		8E538D75266FC65500943AD1 /* Sorcerer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D74266FC65500943AD1 /* Sorcerer.swift */; };
-		8E538D77266FC67F00943AD1 /* Mate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D76266FC67F00943AD1 /* Mate.swift */; };
-		8E538D79266FC6BC00943AD1 /* Canonball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D78266FC6BC00943AD1 /* Canonball.swift */; };
-		8E538D7B266FC71900943AD1 /* MagicSkullhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D7A266FC71900943AD1 /* MagicSkullhead.swift */; };
-		8E538D7D266FC75F00943AD1 /* Harpoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D7C266FC75F00943AD1 /* Harpoon.swift */; };
-		8E538D7F266FC79B00943AD1 /* Scepter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D7E266FC79B00943AD1 /* Scepter.swift */; };
-		8E538D81266FC80000943AD1 /* FlammableRhum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E538D80266FC80000943AD1 /* FlammableRhum.swift */; };
+		8E566871268A131C00986B5A /* Witch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566870268A131C00986B5A /* Witch.swift */; };
+		8E566873268A13D700986B5A /* Fichman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566872268A13D700986B5A /* Fichman.swift */; };
+		8E566875268A147700986B5A /* Sorcerer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566874268A147700986B5A /* Sorcerer.swift */; };
+		8E566877268A14AD00986B5A /* Mate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566876268A14AD00986B5A /* Mate.swift */; };
+		8E566885268A166600986B5A /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566884268A166600986B5A /* Sword.swift */; };
+		8E566887268A16C800986B5A /* Canonball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566886268A16C800986B5A /* Canonball.swift */; };
+		8E566889268A16F000986B5A /* MagicSkullhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E566888268A16F000986B5A /* MagicSkullhead.swift */; };
+		8E56688B268A170800986B5A /* Harpoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E56688A268A170800986B5A /* Harpoon.swift */; };
+		8E56688D268A178900986B5A /* Scepter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E56688C268A178900986B5A /* Scepter.swift */; };
+		8E56688F268A17C600986B5A /* FlammableRhum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E56688E268A17C600986B5A /* FlammableRhum.swift */; };
 		8EB9A968266AA4F500273B3C /* Pirate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9A967266AA4F500273B3C /* Pirate.swift */; };
-		8EB9A96E266AA9F800273B3C /* Sword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9A96D266AA9F800273B3C /* Sword.swift */; };
 		8EB9A96F266AAC1400273B3C /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EB9A96A266AA87000273B3C /* Player.swift */; };
 		8EC34C73266290A300E4ECBC /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC34C72266290A300E4ECBC /* Character.swift */; };
 		8EC34C7726629E1000E4ECBC /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC34C7626629E1000E4ECBC /* Weapon.swift */; };
@@ -39,19 +39,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		8E538D6C266FC5B000943AD1 /* Witch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Witch.swift; path = ../../../../../../Witch.swift; sourceTree = "<group>"; };
 		8E538D70266FC5E200943AD1 /* Jailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jailer.swift; sourceTree = "<group>"; };
-		8E538D72266FC62700943AD1 /* Fichman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Fichman.swift; path = ../../../../../../Fichman.swift; sourceTree = "<group>"; };
-		8E538D74266FC65500943AD1 /* Sorcerer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sorcerer.swift; path = ../../../../../../Sorcerer.swift; sourceTree = "<group>"; };
-		8E538D76266FC67F00943AD1 /* Mate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Mate.swift; path = ../../../../../../Mate.swift; sourceTree = "<group>"; };
-		8E538D78266FC6BC00943AD1 /* Canonball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Canonball.swift; path = ../../../../../../Canonball.swift; sourceTree = "<group>"; };
-		8E538D7A266FC71900943AD1 /* MagicSkullhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MagicSkullhead.swift; path = ../../../../../../MagicSkullhead.swift; sourceTree = "<group>"; };
-		8E538D7C266FC75F00943AD1 /* Harpoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Harpoon.swift; path = ../../../../../../Harpoon.swift; sourceTree = "<group>"; };
-		8E538D7E266FC79B00943AD1 /* Scepter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Scepter.swift; path = ../../../../../../Scepter.swift; sourceTree = "<group>"; };
-		8E538D80266FC80000943AD1 /* FlammableRhum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FlammableRhum.swift; path = ../../../../../../FlammableRhum.swift; sourceTree = "<group>"; };
+		8E566870268A131C00986B5A /* Witch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Witch.swift; sourceTree = "<group>"; };
+		8E566872268A13D700986B5A /* Fichman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fichman.swift; sourceTree = "<group>"; };
+		8E566874268A147700986B5A /* Sorcerer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorcerer.swift; sourceTree = "<group>"; };
+		8E566876268A14AD00986B5A /* Mate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mate.swift; sourceTree = "<group>"; };
+		8E566884268A166600986B5A /* Sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sword.swift; sourceTree = "<group>"; };
+		8E566886268A16C800986B5A /* Canonball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canonball.swift; sourceTree = "<group>"; };
+		8E566888268A16F000986B5A /* MagicSkullhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicSkullhead.swift; sourceTree = "<group>"; };
+		8E56688A268A170800986B5A /* Harpoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Harpoon.swift; sourceTree = "<group>"; };
+		8E56688C268A178900986B5A /* Scepter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scepter.swift; sourceTree = "<group>"; };
+		8E56688E268A17C600986B5A /* FlammableRhum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlammableRhum.swift; sourceTree = "<group>"; };
 		8EB9A967266AA4F500273B3C /* Pirate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pirate.swift; sourceTree = "<group>"; };
 		8EB9A96A266AA87000273B3C /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		8EB9A96D266AA9F800273B3C /* Sword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Sword.swift; path = ../../../../../../Sword.swift; sourceTree = "<group>"; };
 		8EC34C72266290A300E4ECBC /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		8EC34C7626629E1000E4ECBC /* Weapon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		8EDD2FE0265BE334009FE51A /* roleGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = roleGame; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,10 +84,10 @@
 				8EC34C72266290A300E4ECBC /* Character.swift */,
 				8EB9A967266AA4F500273B3C /* Pirate.swift */,
 				8E538D70266FC5E200943AD1 /* Jailer.swift */,
-				8E538D6C266FC5B000943AD1 /* Witch.swift */,
-				8E538D72266FC62700943AD1 /* Fichman.swift */,
-				8E538D74266FC65500943AD1 /* Sorcerer.swift */,
-				8E538D76266FC67F00943AD1 /* Mate.swift */,
+				8E566870268A131C00986B5A /* Witch.swift */,
+				8E566872268A13D700986B5A /* Fichman.swift */,
+				8E566874268A147700986B5A /* Sorcerer.swift */,
+				8E566876268A14AD00986B5A /* Mate.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -96,12 +96,12 @@
 			isa = PBXGroup;
 			children = (
 				8EC34C7626629E1000E4ECBC /* Weapon.swift */,
-				8EB9A96D266AA9F800273B3C /* Sword.swift */,
-				8E538D78266FC6BC00943AD1 /* Canonball.swift */,
-				8E538D7A266FC71900943AD1 /* MagicSkullhead.swift */,
-				8E538D7C266FC75F00943AD1 /* Harpoon.swift */,
-				8E538D7E266FC79B00943AD1 /* Scepter.swift */,
-				8E538D80266FC80000943AD1 /* FlammableRhum.swift */,
+				8E566884268A166600986B5A /* Sword.swift */,
+				8E566886268A16C800986B5A /* Canonball.swift */,
+				8E566888268A16F000986B5A /* MagicSkullhead.swift */,
+				8E56688A268A170800986B5A /* Harpoon.swift */,
+				8E56688C268A178900986B5A /* Scepter.swift */,
+				8E56688E268A17C600986B5A /* FlammableRhum.swift */,
 			);
 			path = Weapons;
 			sourceTree = "<group>";
@@ -191,23 +191,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E538D81266FC80000943AD1 /* FlammableRhum.swift in Sources */,
-				8E538D7D266FC75F00943AD1 /* Harpoon.swift in Sources */,
+				8E566877268A14AD00986B5A /* Mate.swift in Sources */,
 				8EB9A968266AA4F500273B3C /* Pirate.swift in Sources */,
+				8E56688D268A178900986B5A /* Scepter.swift in Sources */,
+				8E566889268A16F000986B5A /* MagicSkullhead.swift in Sources */,
+				8E566887268A16C800986B5A /* Canonball.swift in Sources */,
 				8EDD2FE4265BE334009FE51A /* main.swift in Sources */,
-				8E538D75266FC65500943AD1 /* Sorcerer.swift in Sources */,
+				8E566885268A166600986B5A /* Sword.swift in Sources */,
 				8EC34C7726629E1000E4ECBC /* Weapon.swift in Sources */,
+				8E56688F268A17C600986B5A /* FlammableRhum.swift in Sources */,
 				8EC34C73266290A300E4ECBC /* Character.swift in Sources */,
 				8EB9A96F266AAC1400273B3C /* Player.swift in Sources */,
-				8E538D6D266FC5B000943AD1 /* Witch.swift in Sources */,
+				8E566873268A13D700986B5A /* Fichman.swift in Sources */,
 				8EDD2FEB265BE4DA009FE51A /* Game.swift in Sources */,
-				8E538D77266FC67F00943AD1 /* Mate.swift in Sources */,
-				8E538D7B266FC71900943AD1 /* MagicSkullhead.swift in Sources */,
+				8E566875268A147700986B5A /* Sorcerer.swift in Sources */,
+				8E56688B268A170800986B5A /* Harpoon.swift in Sources */,
+				8E566871268A131C00986B5A /* Witch.swift in Sources */,
 				8E538D71266FC5E200943AD1 /* Jailer.swift in Sources */,
-				8E538D79266FC6BC00943AD1 /* Canonball.swift in Sources */,
-				8E538D73266FC62700943AD1 /* Fichman.swift in Sources */,
-				8E538D7F266FC79B00943AD1 /* Scepter.swift in Sources */,
-				8EB9A96E266AA9F800273B3C /* Sword.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
