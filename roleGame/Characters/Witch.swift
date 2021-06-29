@@ -14,12 +14,16 @@ class Witch: Character {
         super.init(name: "Sorcière", life: 75, weapon: MagicSkullhead())
     }
     
+    static func presentationMenu() ->String{
+        return "Sorcière -> Points de vie : 75 - Arme : Crâne magique - Dégâts : 70"
+    }
+    
     override func actionOn() {
-        let characterReceiver: Character
         
-        func heal(){
-            characterReceiver.life+=25
+        func heal(characterReceiver: Character){
+            characterReceiver.life += super.weapon.damage
         }
     }
     
 }
+

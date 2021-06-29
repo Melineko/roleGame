@@ -14,5 +14,9 @@ class Jailer: Character {
         super.init(name: "Géolier", life: 120, weapon: Canonball())
     }
     
+    static func presentationMenu() ->String{
+        return "Géolier -> Points de vie : 120 - Arme : Boulet - Dégâts : 45"
+    }
+    
     
 }

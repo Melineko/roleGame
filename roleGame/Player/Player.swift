@@ -31,12 +31,12 @@ class Player {
             print("\(player.name) Qui rejoint l'équipage ? Choisis un personnage :\n_____________________________________\n"
                     
                     // Utilier la fonction présentation dans character
-                    + "\n1.  \(piratePlayer.presentation())"
-                    + "\n2.  \(jailerPlayer.presentation())"
-                    + "\n3.  \(witchPlayer.presentation())"
-                    + "\n4.  \(fishmanPlayer.presentation())"
-                    + "\n5.  \(sorcererPlayer.presentation())"
-                    + "\n6.  \(matePlayer.presentation())")
+                    + "\n1.  \(Pirate.presentationMenu())"
+                    + "\n2.  \(Jailer.presentationMenu())"
+                    + "\n3.  \(Witch.presentationMenu())"
+                    + "\n4.  \(Fishman.presentationMenu())"
+                    + "\n5.  \(Sorcerer.presentationMenu())"
+                    + "\n6.  \(Mate.presentationMenu())")
             
             print("Nombre de character dans mon tableau \(player.team.count)/3")
             
@@ -46,77 +46,28 @@ class Player {
                     self.team.append(piratePlayer)
                     
                 case "2":
-                    print("\nNomme ton géolier : ")
-                    if let inputJailerName = readLine(){
-                        for eachCharacter in player.team{
-                            if inputJailerName == eachCharacter.name {
-                                print("Ce nom existe déjà.")
-                            }else{
-                                player.team.append(jailerPlayer)
-                                jailerPlayer.name = "\(inputJailerName)"
-                                print("\nBienvenue à bord \(inputJailerName) le géolier !\n========\n")
-                            }
-                        }//fin boucle for
-                    }
+                    self.team.append(jailerPlayer)
+                    
                 case "3":
-                    print("\nNomme ta sorcière : ")
-                    if let inputWitchName = readLine(){
-                        for eachCharacter in player.team{
-                            if inputWitchName == eachCharacter.name {
-                                print("Ce nom existe déjà.")
-                            }else{
-                        player.team.append(witchPlayer)
-                        witchPlayer.name = "\(inputWitchName)"
-                        print("\nBienvenue à bord \(inputWitchName) la sorcière !\n========\n")
-                            }
-                        }//fin boucle for
-                    }
+                    self.team.append(witchPlayer)
+                    
                 case "4":
-                    print("\nNomme ton pêcheur : ")
-                    if let inputFishmanName = readLine(){
-                        for eachCharacter in player.team{
-                            if inputFishmanName == eachCharacter.name {
-                                print("Ce nom existe déjà.")
-                            }else{
-                        player.team.append(fishmanPlayer)
-                        fishmanPlayer.name = "\(inputFishmanName)"
-                        print("\nBienvenue à bord \(inputFishmanName) le pêcheur !\n========\n")
-                            }
-                        }//fin boucle for
-                    }
+                    self.team.append(fishmanPlayer)
+                    
                 case "5":
-                    print("\nNomme ton mage : ")
-                    if let inputSorcererName = readLine(){
-                        for eachCharacter in player.team{
-                            if inputSorcererName == eachCharacter.name {
-                                print("Ce nom existe déjà.")
-                            }else{
-                        print("\nBienvenue à bord \(inputSorcererName) le mage !\n========\n")
-                        player.team.append(sorcererPlayer)
-                        sorcererPlayer.name = "\(inputSorcererName)"
-                            }
-                        }//fin boucle for
-                    }
+                    self.team.append(sorcererPlayer)
+                    
                 case "6":
-                    print("\nNomme ton moussaillon : ")
-                    if let inputMateName = readLine(){
-                        for eachCharacter in player.team{
-                            if inputMateName == eachCharacter.name {
-                                print("Ce nom existe déjà.")
-                            }else{
-                        print("\nBienvenue à bord \(inputMateName) le moussaillon !\n========\n")
-                        player.team.append(matePlayer)
-                        matePlayer.name = "\(inputMateName)"
-                            }
-                        }//fin boucle for
-                    }
+                    self.team.append(matePlayer)
+                    
                 default :
                     print("--- Choisis un personnage de la liste en tapant son numéro. ---")
                 }
-            }
-            print("Nombre de character dans mon tableau \(player.team.count)/3")
+            }//fin if let readline()
+            print(" \n______________⚓️_______________\nMembres de l'équipage : \(player.team.count)/3\n_______________________________\n")
             selectCharacterName()
         }// balise fin boucle while
+        print("______ ☠️ Ton équipage est au complet ☠️ ______\n\n")
     }
     
     func isValidName(nameEntry: String) -> Bool {
@@ -139,6 +90,7 @@ class Player {
                 // Ajouter le nom
                 if let lastCharacter  = self.team.last {
                     lastCharacter.name = name.lowercased().capitalized
+                    print("\n ⚔️ == Bienvenue à bord \(lastCharacter.name) ! == ⚔️\n\n")
                 }
             } else {
                 // demander de choisir un nouveau nom

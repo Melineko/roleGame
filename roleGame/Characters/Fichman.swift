@@ -14,4 +14,8 @@ class Fishman: Character {
         super.init(name: "Pêcheur", life: 60, weapon: Harpoon())
     }
     
+    static func presentationMenu() ->String{
+        return "Pêcheur -> Points de vie : 60 - Arme : Harpon - Dégâts : 28"
+    }
+    
 }

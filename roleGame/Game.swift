@@ -16,16 +16,6 @@ class Game {
     let player2 = Player(name: "<< Joueur 2 >>")
     // Team joueur 2
     
-    // = Personnages disponibles =
-    let pirateAvailable = Pirate()
-    let jailerAvailable = Jailer()
-    let witchAvailable = Witch()
-    let fishmanAvailable = Fishman()
-    let sorcererAvailable = Sorcerer()
-    let mateAvailable = Mate()
-    
-    
-    
     
     func start() {
         player1.createTeams(player: player1)

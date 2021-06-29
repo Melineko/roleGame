@@ -14,6 +14,10 @@ class Mate: Character {
         super.init(name: "Moussaillon", life: 40, weapon: FlammableRhum())
     }
     
+    static func presentationMenu() ->String{
+        return "Moussaillon -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
+    }
+    
     override func actionOn() {
        
     }

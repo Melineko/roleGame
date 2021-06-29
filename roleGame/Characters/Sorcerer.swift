@@ -14,9 +14,15 @@ class Sorcerer: Character {
         super.init(name: "Mage", life: 75, weapon: Scepter())
     }
     
+    static func presentationMenu() ->String{
+        return "Mage -> Points de vie : 75 - Arme : Sceptre - Dégâts : 62"
+    }
+    
     override func actionOn() {
         
-//            characterReceiver.life+=25
+        func heal(characterReceiver: Character){
+        characterReceiver.life += super.weapon.damage
+    }
     }
     
 }

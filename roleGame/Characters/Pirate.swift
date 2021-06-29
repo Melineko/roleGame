@@ -14,5 +14,8 @@ class Pirate: Character {
         super.init(name: "Pirate", life: 90, weapon: Sword())
         
     }
+    static func presentationMenu() ->String{
+        return "Pirate -> Points de vie : 90 - Arme : Epée - Dégâts : 25"
+    }
         
 }
