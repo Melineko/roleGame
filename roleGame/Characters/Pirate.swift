@@ -11,7 +11,7 @@ import Foundation
 class Pirate: Character {
     
     init() {
-        super.init(name: "Pirate", life: 90, weapon: Sword())
+        super.init(name: "Pirate", life: 90, weapon: Sword(), type: "pirate")
         
     }
     static func presentationMenu() ->String{

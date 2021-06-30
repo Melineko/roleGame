@@ -20,18 +20,20 @@ class Game {
     func start() {
         player1.createTeams(player: player1)
         player2.createTeams(player: player2)
+        
         displayTeams()
     }
     
     
-    
     //= Afficher les équipes =
     func displayTeams() {
+        print("🏴‍☠️===== Team player 1 =====🏴‍☠️")
         for eachCharacterP1 in player1.team {
-            print("\(eachCharacterP1.name)")
+            print("=> \(eachCharacterP1.name)\n")
         }
+        print("🏴‍☠️===== Team player 2 =====🏴‍☠️")
         for eachCharacterP2 in player2.team {
-            print("\(eachCharacterP2.name)")
+            print("=> \(eachCharacterP2.name)\n")
         }
     }
     

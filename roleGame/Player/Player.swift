@@ -25,6 +25,7 @@ class Player {
         let fishmanPlayer = Fishman()
         let sorcererPlayer = Sorcerer()
         let matePlayer = Mate()
+        
         // Tant que le joueur n'a pas choisi 3 personnages
         while player.team.count < 3 {
             
@@ -72,7 +73,7 @@ class Player {
     
     func isValidName(nameEntry: String) -> Bool {
         // Permettre de vérifier le nom
-        for character in self.team {
+        for character in self.team{
             if character.name == nameEntry {
                 print("Ce nom existe déjà merci d'en choisir un autre")
                 return false
@@ -83,22 +84,28 @@ class Player {
     }
     
     func selectCharacterName() {
-        // Permettre de remplacer le nom de ton character dans ton équipe
-        print("Choisir un nom pour votre personnage:")
+        // Permettre de remplacer le nom du personnage dans l'équipe
+        print("Choisis un nom pour ton personnage :")
         if let name = readLine(), !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             if isValidName(nameEntry: name.lowercased().capitalized) {
                 // Ajouter le nom
                 if let lastCharacter  = self.team.last {
                     lastCharacter.name = name.lowercased().capitalized
-                    print("\n ⚔️ == Bienvenue à bord \(lastCharacter.name) ! == ⚔️\n\n")
+                    print("\n ⚔️ == Bienvenue à bord \(lastCharacter.name) le \(lastCharacter.type)! == ⚔️\n\n")
                 }
             } else {
-                // demander de choisir un nouveau nom
+                // Demander de choisir un nouveau nom
                 selectCharacterName()
             }
         }
     }
     
+    
+    /*func compareTeams(){
+        for eachCharacter in Player.team{
+            
+        }
+    }*/
     
     
     
@@ -123,12 +130,6 @@ class Player {
     
     
     
-    
-    // initialisation du tableau
-    /*init (name: String, characters: [Character]){
-        self.name = name
-        self.characters = [Character]()
-    }*/
     
 //je choisi le character et je vais le rajouter à mon tableau
 //    self.characters.append(Pirate())

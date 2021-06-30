@@ -11,11 +11,13 @@ import Foundation
 class Character {
     //propriétés
     var name: String
+    var type: String
     var life: Int
     var weapon: Weapon
     
-    init(name: String, life: Int, weapon: Weapon){
+    init(name: String, life: Int, weapon: Weapon, type: String){
         self.name = name
+        self.type = type
         self.life = life
         self.weapon = weapon
     }

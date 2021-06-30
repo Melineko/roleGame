@@ -11,7 +11,7 @@ import Foundation
 class Mate: Character {
     
     init() {
-        super.init(name: "Moussaillon", life: 40, weapon: FlammableRhum())
+        super.init(name: "Moussaillon", life: 40, weapon: FlammableRhum(), type: "moussaillon")
     }
     
     static func presentationMenu() ->String{

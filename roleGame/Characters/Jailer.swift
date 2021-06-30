@@ -11,7 +11,7 @@ import Foundation
 class Jailer: Character {
     
     init() {
-        super.init(name: "Géolier", life: 120, weapon: Canonball())
+        super.init(name: "Géolier", life: 120, weapon: Canonball(), type: "géolier")
     }
     
     static func presentationMenu() ->String{
