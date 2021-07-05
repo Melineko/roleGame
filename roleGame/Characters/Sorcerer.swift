@@ -18,11 +18,13 @@ class Sorcerer: Character {
         return "Mage -> Points de vie : 75 - Arme : Sceptre - Dégâts : 62"
     }
     
-    override func actionOn() {
-        
-        func heal(characterReceiver: Character){
-        characterReceiver.life += super.weapon.damage
-    }
+    override func actionOn(characterReceiver: Character) {
+        health(characterReceiver: characterReceiver)
     }
     
-}
+    //Soin
+    func health(characterReceiver: Character){
+        characterReceiver.life += self.weapon.damage
+    }
+    
+}// Fin de classe MAGE

@@ -18,5 +18,4 @@ class Jailer: Character {
         return "Géolier -> Points de vie : 120 - Arme : Boulet - Dégâts : 45"
     }
     
-    
 }

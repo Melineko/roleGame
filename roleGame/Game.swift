@@ -18,8 +18,8 @@ class Game {
     
     
     func start() {
-        player1.createTeams(player: player1)
-        player2.createTeams(player: player2)
+        player1.createTeams(player1Team: player1.team)
+        player2.createTeams(player1Team: player1.team)
         
         displayTeams()
     }
@@ -29,11 +29,11 @@ class Game {
     func displayTeams() {
         print("🏴‍☠️===== Team player 1 =====🏴‍☠️")
         for eachCharacterP1 in player1.team {
-            print("=> \(eachCharacterP1.name)\n")
+            print("=> \(eachCharacterP1.name) --> \(eachCharacterP1.type)\n")
         }
         print("🏴‍☠️===== Team player 2 =====🏴‍☠️")
         for eachCharacterP2 in player2.team {
-            print("=> \(eachCharacterP2.name)\n")
+            print("=> \(eachCharacterP2.name) --> \(eachCharacterP2.type)\n")
         }
     }
     

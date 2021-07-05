@@ -28,19 +28,18 @@ class Character {
     }
     
     
-    func actionOn() {
-        // une source et une cible
-//        self.weapon.damage
-//        let characterReceiver: Character =
+    func actionOn(characterReceiver: Character) {
+        fight(characterReceiver: characterReceiver)
         
     }
         
         // Action fight
     func fight(characterReceiver: Character) {
-//            characterReceiver.life-=characterGiver.weapon.damage
-            
+            characterReceiver.life -= self.weapon.damage
         }
-    }//=== FIN DE LA CLASSE
+    
+    
+    }//=== FIN DE LA CLASSE CHARACTER
 
 
 

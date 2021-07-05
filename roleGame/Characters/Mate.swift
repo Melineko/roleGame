@@ -18,8 +18,4 @@ class Mate: Character {
         return "Moussaillon -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
     }
     
-    override func actionOn() {
-       
-    }
-    
 }

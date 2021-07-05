@@ -18,11 +18,13 @@ class Witch: Character {
         return "Sorcière -> Points de vie : 75 - Arme : Crâne magique - Dégâts : 70"
     }
     
-    override func actionOn() {
-        
-        func heal(characterReceiver: Character){
-            characterReceiver.life += super.weapon.damage
-        }
+    override func actionOn(characterReceiver: Character) {
+        health(characterReceiver: characterReceiver)
+    
+    }
+    //Soin
+    func health(characterReceiver: Character){
+        characterReceiver.life += self.weapon.damage
     }
     
 }
