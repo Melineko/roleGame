@@ -11,6 +11,7 @@ import Foundation
 class Player {
     let name: String
     var team: [Character] = []
+    var emitter: Character?
     
     init (name: String){
         self.name = name
@@ -25,7 +26,6 @@ class Player {
             
             print("\(self.name) Qui rejoint l'équipage ? Choisis un personnage :\n_____________________________________\n"
                     
-                    // Utilier la fonction présentation dans character
                     + "\n1.  \(Pirate.presentationMenu())"
                     + "\n2.  \(Jailer.presentationMenu())"
                     + "\n3.  \(Witch.presentationMenu())"
