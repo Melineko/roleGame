@@ -12,10 +12,24 @@ class Player {
     let name: String
     var team: [Character] = []
     var emitter: Character?
+    var receiver: Character?
     
     init (name: String){
         self.name = name
     }
+    
+    
+    
+    //=== FONCTION calcul vie cumulé des persos ===
+    func cumulLife (player: Player) -> Int{
+        var totalLife = 0
+        for eachCharacter in player.team {
+            totalLife += eachCharacter.life
+        }
+        return totalLife
+    }
+    
+    
     
     //=== FONCTION Création d'équipe ===
     func createTeams(player1Team: [Character]) {
@@ -66,7 +80,7 @@ class Player {
     }
     
     
-    
+    //=== FONCTION nom valide ou pas ===
     func isValidName(nameEntry: String, player1Team: [Character]) -> Bool {
         // Permettre de vérifier le nom
         for character in player1Team {
@@ -76,9 +90,10 @@ class Player {
             }
         }
         return true
-    }
+    }// fin Fonction isValidName()
     
     
+    // === FONCTION pour nommer son personnage ===
     func selectCharacterName(player1Team: [Character]) {
         // Permettre de remplacer le nom du personnage dans l'équipe
         print("Choisis un nom pour ton personnage :")
@@ -97,11 +112,15 @@ class Player {
             print("Ce nom n'est pas valide")
             selectCharacterName(player1Team: player1Team)
         }
-    }
+    }// fin Fonction selectCharacterName
     
 }// FIN CLASSE JOUEUR
     
     
+
+
+
+
     
 //    // Fonction pour cas du menu
 //    func actionSelecMenu(characterTypeName: Character ,characterTypePlayer: Character, player : Player){
