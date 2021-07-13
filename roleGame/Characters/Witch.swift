@@ -11,7 +11,7 @@ import Foundation
 class Witch: Character {
     
     init() {
-        super.init(name: "Sorcière", life: 75, weapon: MagicSkullhead(), type: "sorcière")
+        super.init(name: "Sorcière", life: 75, weapon: MagicSkullhead(), type: "sorcière", fonction: "Soigneur")
     }
     
     static func presentationMenu() ->String{

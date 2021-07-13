@@ -11,8 +11,13 @@ import Foundation
 class Player {
     let name: String
     var team: [Character] = []
-    var emitter: Character?
-    var receiver: Character?
+    var allTeamLife: Int {
+        get {
+            return team.reduce(0, {$0 + $1.life})
+        }
+    }
+//    var emitter: Character?
+//    var receiver: Character?
     
     init (name: String){
         self.name = name
@@ -20,20 +25,21 @@ class Player {
     
     
     
-    //=== FONCTION calcul vie cumulé des persos ===
-    func cumulLife (player: Player) -> Int{
-        var totalLife = 0
-        for eachCharacter in player.team {
-            totalLife += eachCharacter.life
-        }
-        return totalLife
-    }
+//    //=== FONCTION calcul vie cumulé des persos ===
+//    func cumulLife (player: Player) -> Int{
+//        var totalLife = 0
+//        for eachCharacter in player.team {
+//            totalLife += eachCharacter.life
+//        }
+//        return totalLife
+//    }
     
     
     
     //=== FONCTION Création d'équipe ===
     func createTeams(player1Team: [Character]) {
         // = Personnages choisis =
+        var isValidChoice = true
         
         // Tant que le joueur n'a pas choisi 3 personnages
         while self.team.count < 3 {
@@ -49,30 +55,33 @@ class Player {
             
             print("Nombre de character dans mon tableau \(self.team.count)/3")
             
+            repeat {
             if let characterChoice = readLine() {
                 switch characterChoice {
                 case "1":
                     self.team.append(Pirate())
-                    
+                    isValidChoice = true
                 case "2":
                     self.team.append(Jailer())
-                    
+                    isValidChoice = true
                 case "3":
                     self.team.append(Witch())
-                    
+                    isValidChoice = true
                 case "4":
                     self.team.append(Fishman())
-                    
+                    isValidChoice = true
                 case "5":
                     self.team.append(Sorcerer())
-                    
+                    isValidChoice = true
                 case "6":
                     self.team.append(Mate())
-                    
+                    isValidChoice = true
                 default :
                     print("--- Choisis un personnage de la liste en tapant son numéro. ---")
+                    isValidChoice = false
                 }
             }//fin if let readline()
+            } while !isValidChoice
             print(" \n______________⚓️_______________\nMembres de l'équipage : \(self.team.count)/3\n_______________________________\n")
             selectCharacterName(player1Team: player1Team)
         }// fin boucle while

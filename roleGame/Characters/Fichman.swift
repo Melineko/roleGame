@@ -11,7 +11,7 @@ import Foundation
 class Fishman: Character {
     
     init() {
-        super.init(name: "Pêcheur", life: 60, weapon: Harpoon(), type: "pêcheur")
+        super.init(name: "Pêcheur", life: 60, weapon: Harpoon(), type: "pêcheur", fonction: "Combattant")
     }
     
     static func presentationMenu() ->String{
