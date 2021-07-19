@@ -11,20 +11,18 @@ import Foundation
 class Sorcerer: Character {
     
     init() {
-        super.init(name: "Mage", life: 75, weapon: Scepter(), type: "mage", fonction: "Soigneur")
+        super.init(name: "Mage", life: 75, lifeMax: 75, weapon: Scepter(), type: "mage", fonction: "Soigneur")
     }
     
     static func presentationMenu() ->String{
         return "Mage -> Points de vie : 75 - Arme : Sceptre - Dégâts : 62"
     }
     
+    // Health action
     override func actionOn(characterReceiver: Character) {
-        health(characterReceiver: characterReceiver)
-    }
-    
-    //Soin
-    func health(characterReceiver: Character){
         characterReceiver.life += self.weapon.damage
     }
+    
+   
     
 }// Fin de classe MAGE

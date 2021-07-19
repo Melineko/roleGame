@@ -16,8 +16,6 @@ class Player {
             return team.reduce(0, {$0 + $1.life})
         }
     }
-//    var emitter: Character?
-//    var receiver: Character?
     
     init (name: String){
         self.name = name
@@ -34,7 +32,14 @@ class Player {
 //        return totalLife
 //    }
     
-    
+    private func presentAllCharacters() -> String {
+        return "\n1.  \(Pirate.presentationMenu())"
+            + "\n2.  \(Jailer.presentationMenu())"
+            + "\n3.  \(Witch.presentationMenu())"
+            + "\n4.  \(Fishman.presentationMenu())"
+            + "\n5.  \(Sorcerer.presentationMenu())"
+            + "\n6.  \(Mate.presentationMenu())"
+    }
     
     //=== FONCTION Création d'équipe ===
     func createTeams(player1Team: [Character]) {
@@ -45,13 +50,8 @@ class Player {
         while self.team.count < 3 {
             
             print("\(self.name) Qui rejoint l'équipage ? Choisis un personnage :\n_____________________________________\n"
-                    
-                    + "\n1.  \(Pirate.presentationMenu())"
-                    + "\n2.  \(Jailer.presentationMenu())"
-                    + "\n3.  \(Witch.presentationMenu())"
-                    + "\n4.  \(Fishman.presentationMenu())"
-                    + "\n5.  \(Sorcerer.presentationMenu())"
-                    + "\n6.  \(Mate.presentationMenu())")
+                    + presentAllCharacters())
+                   
             
             print("Nombre de character dans mon tableau \(self.team.count)/3")
             
@@ -123,28 +123,34 @@ class Player {
         }
     }// fin Fonction selectCharacterName
     
+    //====== FONCTION Afficher les équipes ======
+    func displayTeam() {
+        print("🏴‍☠️===== Equipage du \(self.name) =====🏴‍☠️\n")
+        for eachCharacterP in self.team {
+            print("=> \(eachCharacterP.presentation()) \n")
+        }
+        print("----------------------------------------\n\n")
+    }//fin fonction displayTeams()
+    
+    
+    // = FONCTION Selection du personnage
+    func selectCharacter() -> Character? {
+        if let entry = readLine() {
+            switch entry {
+            case "1":
+                return self.team[0]
+            case "2":
+                return self.team[1]
+            case "3":
+                return self.team[2]
+            default:
+                print("Choisis un numéro entre 1 et 3.")
+                break
+            }
+        }
+        return nil
+    }
+    
 }// FIN CLASSE JOUEUR
     
     
-
-
-
-
-    
-//    // Fonction pour cas du menu
-//    func actionSelecMenu(characterTypeName: Character ,characterTypePlayer: Character, player : Player){
-//        print("\nNomme ton \(characterTypeName.name) : ")
-//
-//        if let inputCharacterName = readLine(){
-//            //Verification des noms existants dans le tableau du joueur
-//            for eachCharacter in player.team{
-//                if inputCharacterName == eachCharacter.name {
-//                    print("Ce nom existe déjà.")
-//                }else{
-//                    player.team.append(characterTypePlayer)
-//                    characterTypePlayer.name = "\(inputCharacterName)"
-//                    print("\nBienvenue à bord \(inputCharacterName) le \(characterTypeName.name) !\n========\n")
-//                }
-//            }//fin boucle for
-//        }
-//    }//fin func actionSelecMenu
