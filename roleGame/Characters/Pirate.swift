@@ -16,7 +16,7 @@ class Pirate: Character {
     }
     
     static func presentationMenu() ->String{
-        return "Pirate -> Points de vie : 90 - Arme : Epée - Dégâts : 25"
+        return "Pirate (Combattant) -> Points de vie : 90 - Arme : Epée - Dégâts : 25"
     }
         
 }

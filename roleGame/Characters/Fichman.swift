@@ -15,7 +15,7 @@ class Fishman: Character {
     }
     
     static func presentationMenu() ->String{
-        return "Pêcheur -> Points de vie : 60 - Arme : Harpon - Dégâts : 28"
+        return "Pêcheur (Combattant) -> Points de vie : 60 - Arme : Harpon - Dégâts : 28"
     }
     
 }

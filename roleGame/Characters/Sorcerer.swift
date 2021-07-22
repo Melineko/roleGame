@@ -15,12 +15,26 @@ class Sorcerer: Character {
     }
     
     static func presentationMenu() ->String{
-        return "Mage -> Points de vie : 75 - Arme : Sceptre - Dégâts : 62"
+        return "Mage (Soigneur) -> Points de vie : 75 - Arme : Sceptre - Soins : 62"
     }
     
+    override func presentation() -> String {
+            // Présentation du character
+            if life > 0{
+                return "\(name) : \(type), \(fonction) -> Points de vie : \(life) - Objet de soin : \(weapon.name) - Soins : \(weapon.damage)"
+            }else{
+                return "\(name) -> ✝︎"
+            }
+        }
     // Health action
     override func actionOn(characterReceiver: Character) {
+        
         characterReceiver.life += self.weapon.damage
+        
+        if characterReceiver.life > characterReceiver.lifeMax{
+            characterReceiver.life = characterReceiver.lifeMax
+            print ("C'est la pleine forme !")
+        }
     }
     
    

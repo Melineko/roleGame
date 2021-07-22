@@ -53,7 +53,7 @@ class Player {
                     + presentAllCharacters())
                    
             
-            print("Nombre de character dans mon tableau \(self.team.count)/3")
+            print("Nombre d'équipier sur mon navire : \(self.team.count)/3")
             
             repeat {
             if let characterChoice = readLine() {
@@ -65,14 +65,24 @@ class Player {
                     self.team.append(Jailer())
                     isValidChoice = true
                 case "3":
-                    self.team.append(Witch())
-                    isValidChoice = true
+                    if self.team.first?.fonction == "Soigneur" || self.team.last?.fonction == "Soigneur"{
+                        print("Tu ne peux recruter qu'un seul soigneur. Choisis un combattant.")
+                        isValidChoice = false
+                        }else{
+                        self.team.append(Witch())
+                        isValidChoice = true
+                        }
                 case "4":
                     self.team.append(Fishman())
                     isValidChoice = true
                 case "5":
-                    self.team.append(Sorcerer())
-                    isValidChoice = true
+                    if self.team.first?.fonction == "Soigneur" || self.team.last?.fonction == "Soigneur"{
+                        print("Tu ne peux recruter qu'un seul soigneur. Choisis un combattant.")
+                        isValidChoice = false
+                        }else{
+                        self.team.append(Sorcerer())
+                        isValidChoice = true
+                        }
                 case "6":
                     self.team.append(Mate())
                     isValidChoice = true
@@ -86,7 +96,7 @@ class Player {
             selectCharacterName(player1Team: player1Team)
         }// fin boucle while
         print("______ ☠️ Ton équipage est au complet ☠️ ______\n\n")
-    }
+    }//fin Fonction Création d'équipe
     
     
     //=== FONCTION nom valide ou pas ===
@@ -123,6 +133,7 @@ class Player {
         }
     }// fin Fonction selectCharacterName
     
+    
     //====== FONCTION Afficher les équipes ======
     func displayTeam() {
         print("🏴‍☠️===== Equipage du \(self.name) =====🏴‍☠️\n")
@@ -149,7 +160,7 @@ class Player {
             }
         }
         return nil
-    }
+    }//Fin Fonction selection de personnage
     
 }// FIN CLASSE JOUEUR
     

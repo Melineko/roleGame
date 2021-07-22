@@ -15,7 +15,7 @@ class Mate: Character {
     }
     
     static func presentationMenu() ->String{
-        return "Moussaillon -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
+        return "Moussaillon (Combattant) -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
     }
     
 }

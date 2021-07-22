@@ -29,7 +29,7 @@ class Character {
     func presentation() -> String {
         // Présentation du character
         if life > 0{
-            return "\(name) -> Points de vie : \(life) - Arme : \(weapon.name) - Dégâts : \(weapon.damage)"
+            return "\(name) : \(type), \(fonction) ---> Points de vie : \(life) - Arme : \(weapon.name) - Dégâts : \(weapon.damage)"
         }else{
             return "\(name) -> ✝︎"
         }
