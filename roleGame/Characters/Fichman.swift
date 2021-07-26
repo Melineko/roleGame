@@ -7,15 +7,19 @@
 
 import Foundation
 
-//-- sous-classe de PERSONNAGE : PECHEUR--
 class Fishman: Character {
     
     init() {
         super.init(name: "Pêcheur", life: 60, lifeMax: 60, weapon: Harpoon(), type: "pêcheur", fonction: "Combattant")
     }
     
-    static func presentationMenu() ->String{
-        return "Pêcheur (Combattant) -> Points de vie : 60 - Arme : Harpon - Dégâts : 28"
-    }
     
-}
+    
+    //=== FISHMAN INITIAL PRESENTATION ===
+    static func presentationMenu() -> String {
+        return "␦ Pêcheur (Combattant) -> Points de vie : 60 - Arme : Harpon - Dégâts : 28"
+    }//===================================
+    
+    
+    
+}//=== END FISHMAN CLASS ===

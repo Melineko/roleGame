@@ -14,29 +14,37 @@ class Witch: Character {
         super.init(name: "Sorcière", life: 75, lifeMax: 75, weapon: MagicSkullhead(), type: "sorcière", fonction: "Soigneur")
     }
     
-    static func presentationMenu() ->String{
-        return "Sorcière (Soigneur) -> Points de vie : 75 - Arme : Crâne magique - Soins : 70"
-    }
     
+    
+    //=== WITCH INITIAL PRESENTATION ===
+    static func presentationMenu() -> String {
+        return "✦ Sorcière (Soigneur) -> Points de vie : 75 - Arme : Crâne magique - Soins : 70"
+    }//=================================
+    
+    
+    
+    //=== Override presentation with healthing specs ===
     override func presentation() -> String {
-            // Présentation du character
-            if life > 0{
-                return "\(name) : \(type), \(fonction) -> Points de vie : \(life) - Objet de soin : \(weapon.name) - Soins : \(weapon.damage)"
-            }else{
+            if life > 0 {
+                return "\(name) : \(type), \(fonction) --> Points de vie : \(life) - Objet de soin : \(weapon.name) - Soins : \(weapon.damage)"
+            } else {
                 return "\(name) -> ✝︎"
-            }
         }
+    }//================================================
     
+    
+    
+    //=== Override action with healthing specs ===
     override func actionOn(characterReceiver: Character) {
         
         characterReceiver.life += self.weapon.damage
         
-        if characterReceiver.life > characterReceiver.lifeMax{
+        if characterReceiver.life > characterReceiver.lifeMax {
             characterReceiver.life = characterReceiver.lifeMax
             print ("C'est la pleine forme !")
         }
-    }
+    }//=============================================
     
     
-}// fin Classe SORCIERE
+}//=== END WITCH CLASS ===
 

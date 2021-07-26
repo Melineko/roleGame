@@ -7,9 +7,8 @@
 
 import Foundation
 
-//== CLASSE ARME ==
 class Weapon {
-    // == propriétés ==
+    
     var name: String
     var damage: Int
     

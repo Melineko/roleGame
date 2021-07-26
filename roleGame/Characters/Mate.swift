@@ -7,15 +7,19 @@
 
 import Foundation
 
-//-- sous-classe de PERSONNAGE : MOUSSAILLON--
 class Mate: Character {
     
     init() {
         super.init(name: "Moussaillon", life: 40, lifeMax: 40, weapon: FlammableRhum(), type: "moussaillon", fonction: "Combattant")
     }
     
-    static func presentationMenu() ->String{
-        return "Moussaillon (Combattant) -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
-    }
     
-}
+    
+    //=== FICHMAN INITIAL PRESENTATION ===
+    static func presentationMenu() -> String {
+        return "⎈ Moussaillon (Combattant) -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
+    }//===================================
+    
+    
+    
+}//=== END MATE CLASS ===
