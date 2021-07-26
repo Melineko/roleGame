@@ -110,7 +110,9 @@ class Game {
             } else {
                 turnOfPlayer()
             }
-        }// end if let emitter
+        }/* end if let emitter*/else {
+            turnOfPlayer()
+        }
     }//================
     
     
@@ -141,7 +143,9 @@ class Game {
              } else {
                 actOnReceiver(emitter: emitter)
             }
-          }// if let receiver
+        }/* if let receiver*/ else {
+            actOnReceiver(emitter: emitter)
+        }
     }//==========================
     
     
