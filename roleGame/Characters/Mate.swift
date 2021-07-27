@@ -17,7 +17,7 @@ class Mate: Character {
     
     //=== FICHMAN INITIAL PRESENTATION ===
     static func presentationMenu() -> String {
-        return "⎈ Moussaillon (Combattant) -> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
+        return "⎈ Moussaillon (Combattant) ---> Points de vie : 40 - Arme : Rhum incendiaire - Dégâts : 80"
     }//===================================
     
     

@@ -32,7 +32,7 @@ class Character {
         if life > 0{
             return "\(name) : \(type), \(fonction) ---> Points de vie : \(life) - Arme : \(weapon.name) - Dégâts : \(weapon.damage)"
         } else {
-            return "\(name) -> ✝︎"
+            return "\(name) ---> ✝︎"
         }
     }//======================================
     
@@ -51,7 +51,7 @@ class Character {
         print("Vous trouvez un coffre d'armurier. Souhaitez-vous l'ouvrir ?")
         print("1. YES    /    2. NO")
         if let answerPlayer = readLine(){
-            if isPlayerOpensChest(entry: answerPlayer){
+            if isPlayerOpensChest(entry: answerPlayer, character: character){
                 character.weapon = BonusWeapon()
                 print(character.presentation())
                 
@@ -60,7 +60,7 @@ class Character {
     }
     
     //=== OPEN THE CHEST OR NOT ===
-    func isPlayerOpensChest(entry: String)-> Bool {
+    func isPlayerOpensChest(entry: String, character: Character)-> Bool {
         if entry == "2" {
             print("Ne prenons pas de risques...")
             return false
@@ -69,6 +69,7 @@ class Character {
             return true
         }else{
             print("Choisissez 1 ou 2.")
+            findingChest(character: character)
         }
         return true
     }

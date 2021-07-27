@@ -17,7 +17,7 @@ class Jailer: Character {
     
     //=== JAILER INITIAL PRESENTATION ===
     static func presentationMenu() -> String {
-        return "☍ Géolier (Combattant) -> Points de vie : 120 - Arme : Boulet - Dégâts : 45"
+        return "☍ Géolier (Combattant) ---> Points de vie : 120 - Arme : Boulet - Dégâts : 45"
     }//==================================
     
     

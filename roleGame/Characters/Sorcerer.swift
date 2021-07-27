@@ -17,7 +17,7 @@ class Sorcerer: Character {
     
     //=== WITCH INITIAL PRESENTATION ===
     static func presentationMenu() -> String {
-        return "⚚ Mage (Soigneur) --> Points de vie : 75 - Arme : Sceptre - Soins : 62"
+        return "⚚ Mage (Soigneur) ---> Points de vie : 75 - Arme : Sceptre - Soins : 62"
     }//=================================
     
     
@@ -26,7 +26,7 @@ class Sorcerer: Character {
     //=== Override presentation with healthing specs ===
     override func presentation() -> String {
             if life > 0{
-                return "\(name) : \(type), \(fonction) -> Points de vie : \(life) - Objet de soin : \(weapon.name) - Soins : \(weapon.damage)"
+                return "\(name) : \(type), \(fonction) ---> Points de vie : \(life) - Objet de soin : \(weapon.name) - Soins : \(weapon.damage)"
             }else{
                 return "\(name) -> ✝︎"
             }
@@ -42,7 +42,7 @@ class Sorcerer: Character {
         
         if characterReceiver.life > characterReceiver.lifeMax {
             characterReceiver.life = characterReceiver.lifeMax
-            print ("C'est la pleine forme !")
+            print ("✦ C'est la pleine forme ! ✦")
         }
     }//=============================================
     

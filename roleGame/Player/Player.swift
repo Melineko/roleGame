@@ -43,10 +43,8 @@ class Player {
         
         while self.team.count < 3 {
             
-            print("\(self.name) Qui rejoint l'équipage ? Choisis un personnage :\n_____________________________________\n"
+            print("\(self.name) Capitaine, qui rejoint l'équipage ? Choisissez un personnage :\n_____________________________________\n"
                     + presentAllCharacters())
-            
-            print("\nNombre d'équipier sur mon navire : \(self.team.count)/3")
             
             repeat {
                 if let characterChoice = readLine() {
@@ -59,7 +57,7 @@ class Player {
                         isValidChoice = true
                     case "3":
                         if self.team.first?.fonction == "Soigneur" || self.team.last?.fonction == "Soigneur" {
-                            print("Tu ne peux recruter qu'un seul soigneur. Choisis un combattant.")
+                            print("Vous ne pouvez recruter qu'un seul soigneur. Choisissez un combattant.")
                             isValidChoice = false
                         } else {
                             self.team.append(Witch())
@@ -70,7 +68,7 @@ class Player {
                         isValidChoice = true
                     case "5":
                         if self.team.first?.fonction == "Soigneur" || self.team.last?.fonction == "Soigneur" {
-                            print("Tu ne peux recruter qu'un seul soigneur. Choisis un combattant.")
+                            print("Vous ne pouvez recruter qu'un seul soigneur. Choisissez un combattant.")
                             isValidChoice = false
                         } else {
                             self.team.append(Sorcerer())
@@ -80,7 +78,7 @@ class Player {
                         self.team.append(Mate())
                         isValidChoice = true
                     default :
-                        print("--- Choisis un personnage de la liste en tapant son numéro. ---")
+                        print("--- Choisissez un personnage de la liste en tapant son numéro. ---")
                         isValidChoice = false
                     }
                 }//fin if let readline()
@@ -89,7 +87,7 @@ class Player {
             print(" \n______________⚓️_______________\n  Membres de l'équipage : \(self.team.count)/3\n_______________________________\n")
             selectCharacterName(player1Team: player1Team)
         }// fin boucle while
-        print("______ ☠️ Ton équipage est au complet ☠️ ______\n\n")
+        print("______ ☠️ Votre équipage est au complet ☠️ ______\n\n")
         drawBoat()
     }//=======================
     
@@ -101,7 +99,7 @@ class Player {
         // Permettre de vérifier le nom
         for character in player1Team {
             if nameEntry == character.name {
-                print("Ce nom existe déjà merci d'en choisir un autre")
+                print("\nCe nom existe déjà... mais vous ne manquez pas d'imagination.\n")
                 return false
             }
         }
@@ -114,21 +112,31 @@ class Player {
     // === GIVE A NAME AT THE CHARACTER ===
     func selectCharacterName(player1Team: [Character]) {
         
-        print("Choisis un nom pour ton personnage :")
+        print("Choisissez un nom pour votre nouvel équipier :")
         
         if let name = readLine(), !name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             if isValidName(nameEntry: name.lowercased().capitalized, player1Team: player1Team) && isValidName(nameEntry: name.lowercased().capitalized, player1Team: self.team) {
                 // Add the name
                 if let lastCharacter  = self.team.last {
                     lastCharacter.name = name.lowercased().capitalized
-                    print("\n ⚔️ == Bienvenue à bord \(lastCharacter.name) le \(lastCharacter.type)! == ⚔️\n\n")
+                    // using "la" or "le"
+                    var gender: String{
+                        get{
+                            if lastCharacter.type == "sorcière" {
+                                return "la"
+                            } else {
+                                return "le"
+                            }
+                        }
+                    }
+                    print("\n ⚔️ == Bienvenue à bord \(lastCharacter.name) \(gender) \(lastCharacter.type) ! == ⚔️\n\n")
                 }
             } else {
                 // Choose a new name
                 selectCharacterName(player1Team: player1Team)
             }
         } else {
-            print("Ce nom n'est pas valide")
+            print("Ce nom n'est pas valide.")
             selectCharacterName(player1Team: player1Team)
         }
     }//=====================================
@@ -159,7 +167,7 @@ class Player {
             case "3":
                 return self.team[2]
             default:
-                print("Choisis un numéro entre 1 et 3.")
+                print("Choisissez un numéro entre 1 et 3.")
                 break
             }
         }

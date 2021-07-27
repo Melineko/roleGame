@@ -36,7 +36,7 @@ class Game {
             numberOfTurns += 1
         } while isAllCharacterAlive() && !isStayOnlyHealther()
         
-        print("Tout votre équipage a trépassé.")
+        print("\n✝︎ L'équipage du \(players[0].name) a trépassé. ✝︎")
     }//=========================
     
     
@@ -68,10 +68,20 @@ class Game {
     
     
     //=== LIFE CHARACTER CHECKING ===
-    func isCharacterAlive (character: Character) -> Bool {
+    private func isCharacterAlive (character: Character) -> Bool {
         if character.life <= 0 {
             character.life = 0
-            print("\(character.name) est mort(e).")
+            // using "mort" ou "morte"
+            var genderDeath: String{
+                get{
+                    if character.type == "sorcière" {
+                        return "morte"
+                    } else {
+                        return "mort"
+                    }
+                }
+            }
+            print("\(character.name) est \(genderDeath).")
             return false
         }
         return true
@@ -82,8 +92,10 @@ class Game {
     //=== DISPLAY WINNER STATISTICS ===
     func displayWinner() {
         let winner: Player = players[1]
-        print("\n==>   L'EQUIPAGE \(winner.name) REMPORTE LA BATAILLE !  <==\n")
-        print("»~._.~\"~._.~\"~._.~\"~._.~\n")
+        print("")
+        print("\n==>   L'EQUIPAGE DU \(winner.name) REMPORTE LA BATAILLE !  <==\n")
+        drawVictory()
+        print("\n»~._.~\"~._.~\"~._.~\"~._.~\n")
         print("Nombre de tours : \(numberOfTurns)")
         winner.displayTeam()
         print("»~._.~\"~._.~\"~._.~\"~._.~")
@@ -94,11 +106,11 @@ class Game {
     //=== ONE TURN ===
     func turnOfPlayer() {
         //let randomNumb = Int.random(in: 2...10)
-        print("\n\(players[0].name) Quel équipier doit agir ? (Tapes son numéro)\n____________")
+        print("\n\(players[0].name) Quel équipier doit agir ? (Tapez son numéro)\n____________")
         for i in 1...players[0].team.count {
             print("\(i). \(players[0].team[i-1].presentation())")
         }
-        // is emitter don't nil and alive
+        // is emitter doesn't nil and alive
         if let emitter = players[0].selectCharacter() {
             if isCharacterAlive(character: emitter) {
                 // maybe he finds a chest
@@ -121,7 +133,7 @@ class Game {
     //=== ACTION ON RECEIVER ===
     func actOnReceiver(emitter: Character) {
         
-        print("\n\(players[0].name), sur quel personnage veux-tu agir ? (Tapes son numéro) :\n____________")
+        print("\n\(players[0].name), sur quel personnage voulez-vous agir ? (Tapez son numéro) :\n____________")
         
         // calculate var for index
         var indexPlayer: Int {
@@ -139,7 +151,20 @@ class Game {
               // make action on receiver
               emitter.actionOn(characterReceiver: receiver)
                 if isCharacterAlive(character: receiver) {
-                    print ("\(emitter.name) s'est occupé de \(receiver.name). --> Points de vie restants pour \(receiver.name) : \(receiver.life)\n")}
+                    // if the character act on his-self
+                    var nameReceiver: String {
+                        get {
+                         if receiver.type == emitter.type {
+                             if receiver.type == "sorcière" {
+                                return "d'elle-même"
+                             } else if receiver.type == "mage" {
+                                return "de lui-même"
+                             }
+                            }
+                                return "de \(receiver.name)"
+                          }
+                        }
+                    print ("\(emitter.name) s'est occupé \(nameReceiver). ---> Points de vie restants pour \(receiver.name) : \(receiver.life)\n")}
              } else {
                 actOnReceiver(emitter: emitter)
             }
