@@ -9,8 +9,8 @@ import Foundation
 
 class Game {
     
-   var players: [Player] = [Player(name: "< JOUEUR 1 >"),  Player(name: "< JOUEUR 2 >")]
-   var numberOfTurns = 0
+   private var players: [Player] = [Player(name: "< JOUEUR 1 >"),  Player(name: "< JOUEUR 2 >")]
+   private var numberOfTurns = 0
    
     
     //=== START ===
@@ -29,7 +29,7 @@ class Game {
     
     
     // === START THE BATTLE ===
-    func startBattle() {
+    private func startBattle() {
         repeat {
             turnOfPlayer()
             players.swapAt(0, 1)
@@ -90,7 +90,7 @@ class Game {
     
     
     //=== DISPLAY WINNER STATISTICS ===
-    func displayWinner() {
+    private func displayWinner() {
         let winner: Player = players[1]
         print("")
         print("\n==>   L'EQUIPAGE DU \(winner.name) REMPORTE LA BATAILLE !  <==\n")
@@ -104,7 +104,7 @@ class Game {
     
     
     //=== ONE TURN ===
-    func turnOfPlayer() {
+    private func turnOfPlayer() {
         //let randomNumb = Int.random(in: 2...10)
         print("\n\(players[0].name) Quel équipier doit agir ? (Tapez son numéro)\n____________")
         for i in 1...players[0].team.count {
@@ -131,7 +131,7 @@ class Game {
     
     
     //=== ACTION ON RECEIVER ===
-    func actOnReceiver(emitter: Character) {
+    private func actOnReceiver(emitter: Character) {
         
         print("\n\(players[0].name), sur quel personnage voulez-vous agir ? (Tapez son numéro) :\n____________")
         

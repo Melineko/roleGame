@@ -60,7 +60,7 @@ class Character {
     }
     
     //=== OPEN THE CHEST OR NOT ===
-    func isPlayerOpensChest(entry: String, character: Character)-> Bool {
+   private func isPlayerOpensChest(entry: String, character: Character)-> Bool {
         if entry == "2" {
             print("Ne prenons pas de risques...")
             return false

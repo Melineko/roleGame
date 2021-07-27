@@ -95,7 +95,7 @@ class Player {
     
     
     //=== NAME VALID CHECKING ===
-    func isValidName(nameEntry: String, player1Team: [Character]) -> Bool {
+    private func isValidName(nameEntry: String, player1Team: [Character]) -> Bool {
         // Permettre de vérifier le nom
         for character in player1Team {
             if nameEntry == character.name {
@@ -110,7 +110,7 @@ class Player {
     
     
     // === GIVE A NAME AT THE CHARACTER ===
-    func selectCharacterName(player1Team: [Character]) {
+    private func selectCharacterName(player1Team: [Character]) {
         
         print("Choisissez un nom pour votre nouvel équipier :")
         
