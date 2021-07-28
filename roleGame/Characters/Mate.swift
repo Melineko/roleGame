@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Mate: Character {
+final class Mate: Character {
     
     init() {
         super.init(name: "Moussaillon", life: 40, lifeMax: 40, weapon: FlammableRhum(), type: "moussaillon", fonction: "Combattant")

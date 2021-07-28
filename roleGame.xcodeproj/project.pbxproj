@@ -74,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8E8DD78926B1BEB100F1B8D4 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8E338E4526AB283D007F38CE /* Ascii-Art.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		8EB9A969266AA86B00273B3C /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,10 +140,10 @@
 			children = (
 				8EDD2FE3265BE334009FE51A /* main.swift */,
 				8EDD2FEA265BE4DA009FE51A /* Game.swift */,
-				8E338E4526AB283D007F38CE /* Ascii-Art.swift */,
 				8EB9A969266AA86B00273B3C /* Player */,
 				8EB9A96B266AA8DD00273B3C /* Characters */,
 				8EB9A96C266AA90200273B3C /* Weapons */,
+				8E8DD78926B1BEB100F1B8D4 /* Utilities */,
 			);
 			path = roleGame;
 			sourceTree = "<group>";

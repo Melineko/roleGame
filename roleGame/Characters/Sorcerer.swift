@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Sorcerer: Character {
+final class Sorcerer: Character {
     
     init() {
         super.init(name: "Mage", life: 75, lifeMax: 75, weapon: Scepter(), type: "mage", fonction: "Soigneur")

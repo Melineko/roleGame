@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Harpoon: Weapon {
+final class Harpoon: Weapon {
     init() {
         super.init(name: "Harpon", damage: 28)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Canonball: Weapon {
+final class Canonball: Weapon {
     init() {
         super.init(name: "Boulet", damage: 45)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Fishman: Character {
+final class Fishman: Character {
     
     init() {
         super.init(name: "Pêcheur", life: 60, lifeMax: 60, weapon: Harpoon(), type: "pêcheur", fonction: "Combattant")

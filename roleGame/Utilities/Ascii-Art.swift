@@ -7,7 +7,10 @@
 
 import Foundation
 
-func drawBoat() {
+class AsciiArt {
+    
+    
+static func drawBoat() {
     print("")
     print ("              |    |    |\\")
     print("             )_)  )_)  )_)\\")
@@ -23,7 +26,7 @@ func drawBoat() {
 }
 
 
-func titleGraph(){
+static func titleGraph(){
     print("\n________________     WAR OF    ____________________")
     print("")
     print("HHH   HHH        HHH          HHH        HHH     HH")
@@ -41,7 +44,7 @@ func titleGraph(){
 }
 
 
-func arrowDraw(){
+static func arrowDraw(){
     print("                    || ")
     print("                    ||")
     print("                    ||")
@@ -50,7 +53,7 @@ func arrowDraw(){
 }
 
 
-func drawReaper(){
+static func drawReaper(){
 print("    ____,")
 print("   /.---|")
 print("   `    |     ___")
@@ -72,7 +75,7 @@ print("")
 print("")
 }
 
-func drawVictory(){
+static func drawVictory(){
 print("    _      _        _")
 print("   (_)    | |      (_)")
 print("__   ___  ___| |_ ___  _ _ __ ___")
@@ -80,3 +83,6 @@ print("\\ \\ / / |/ __| __/ _ \\| | '__/ _ \\")
 print("\\ V /| | (__| || (_) | | | |  __/")
 print("\\_/ |_|\\___|\\__\\___/|_|_|  \\___|")
 }
+    
+    
+}//==============================

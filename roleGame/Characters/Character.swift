@@ -10,10 +10,10 @@ import Foundation
 class Character {
 
     var name: String
-    var type: String
+    let type: String
     var life: Int
-    var lifeMax: Int
-    var fonction: String
+    let lifeMax: Int
+    let fonction: String
     var weapon: Weapon
     
     init(name: String, life: Int, lifeMax: Int, weapon: Weapon, type: String, fonction: String) {

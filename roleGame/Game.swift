@@ -15,14 +15,14 @@ class Game {
     
     //=== START ===
     func start() {
-        titleGraph()
+        AsciiArt.titleGraph()
         for player in players {
             player.createTeams(player1Team: players[0].team)
             player.displayTeam()
-            arrowDraw()
+            AsciiArt.arrowDraw()
         }
         startBattle()
-        drawReaper()
+        AsciiArt.drawReaper()
         displayWinner()
     }//=============
     
@@ -94,7 +94,7 @@ class Game {
         let winner: Player = players[1]
         print("")
         print("\n==>   L'EQUIPAGE DU \(winner.name) REMPORTE LA BATAILLE !  <==\n")
-        drawVictory()
+        AsciiArt.drawVictory()
         print("\n»~._.~\"~._.~\"~._.~\"~._.~\n")
         print("Nombre de tours : \(numberOfTurns)")
         winner.displayTeam()

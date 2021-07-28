@@ -8,7 +8,7 @@
 import Foundation
 
 
-class Player {
+final class Player {
     
     let name: String
     var team: [Character] = []
@@ -81,14 +81,14 @@ class Player {
                         print("--- Choisissez un personnage de la liste en tapant son numéro. ---")
                         isValidChoice = false
                     }
-                }//fin if let readline()
+                }//end if let readline()
             } while !isValidChoice
             
             print(" \n______________⚓️_______________\n  Membres de l'équipage : \(self.team.count)/3\n_______________________________\n")
             selectCharacterName(player1Team: player1Team)
         }// fin boucle while
         print("______ ☠️ Votre équipage est au complet ☠️ ______\n\n")
-        drawBoat()
+        AsciiArt.drawBoat()
     }//=======================
     
     
@@ -96,7 +96,6 @@ class Player {
     
     //=== NAME VALID CHECKING ===
     private func isValidName(nameEntry: String, player1Team: [Character]) -> Bool {
-        // Permettre de vérifier le nom
         for character in player1Team {
             if nameEntry == character.name {
                 print("\nCe nom existe déjà... mais vous ne manquez pas d'imagination.\n")
