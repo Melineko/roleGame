@@ -8,7 +8,9 @@
 import Foundation
 
 final class Canonball: Weapon {
+    
     init() {
         super.init(name: "Boulet", damage: 45)
     }
+    
 }

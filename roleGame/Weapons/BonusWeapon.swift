@@ -7,8 +7,10 @@
 
 import Foundation
 
-final class BonusWeapon: Weapon{
+final class BonusWeapon: Weapon {
+    
     init() {
         super.init(name: "Dague en or incisive", damage: 60)
     }
+    
 }

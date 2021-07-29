@@ -8,7 +8,7 @@
 import Foundation
 
 class Character {
-
+    
     var name: String
     let type: String
     var life: Int
@@ -25,8 +25,6 @@ class Character {
         self.weapon = weapon
     }
     
-    
-    
     //=== PRESENTATION STATS OF CHARACTER ===
     func presentation() -> String {
         if life > 0{
@@ -34,17 +32,12 @@ class Character {
         } else {
             return "\(name) ---> ✝︎"
         }
-    }//======================================
-    
-    
-    
+    }
     
     //=== MAKE ACTION ===
     func actionOn(characterReceiver: Character) {
         characterReceiver.life -= self.weapon.damage
-    }//==================
-    
-    
+    }
     
     //=== A CHEST WAS FOUND ===
     func findingChest(character: Character){
@@ -54,29 +47,26 @@ class Character {
             if isPlayerOpensChest(entry: answerPlayer, character: character){
                 character.weapon = BonusWeapon()
                 print(character.presentation())
-                
             }
         }
     }
     
     //=== OPEN THE CHEST OR NOT ===
-   private func isPlayerOpensChest(entry: String, character: Character)-> Bool {
+    private func isPlayerOpensChest(entry: String, character: Character)-> Bool {
         if entry == "2" {
             print("Ne prenons pas de risques...")
             return false
-        }else if entry == "1" {
+        } else if entry == "1" {
             print("Vous venez de récupérer une dague en or.")
             return true
-        }else{
+        } else {
             print("Choisissez 1 ou 2.")
             findingChest(character: character)
         }
         return true
     }
     
-    
-    
-}//=== END CHARACTER CLASS ===
+}
 
 
 

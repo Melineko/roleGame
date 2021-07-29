@@ -7,13 +7,11 @@
 
 import Foundation
 
-class Game {
+final class Game {
     
-   private var players: [Player] = [Player(name: "< JOUEUR 1 >"),  Player(name: "< JOUEUR 2 >")]
-   private var numberOfTurns = 0
-   
+    private var players: [Player] = [Player(name: "< JOUEUR 1 >"),  Player(name: "< JOUEUR 2 >")]
+    private var numberOfTurns = 0
     
-    //=== START ===
     func start() {
         AsciiArt.titleGraph()
         for player in players {
@@ -24,11 +22,8 @@ class Game {
         startBattle()
         AsciiArt.drawReaper()
         displayWinner()
-    }//=============
+    }
     
-    
-    
-    // === START THE BATTLE ===
     private func startBattle() {
         repeat {
             turnOfPlayer()
@@ -37,9 +32,7 @@ class Game {
         } while isAllCharacterAlive() && !isStayOnlyHealther()
         
         print("\n✝︎ L'équipage du \(players[0].name) a trépassé. ✝︎")
-    }//=========================
-    
-    
+    }
     
     // === LIFE TEAM CHECKING ===
     private func isAllCharacterAlive() -> Bool {
@@ -49,9 +42,7 @@ class Game {
             }
         }
         return true
-    }//===========================
-    
-    
+    }
     
     // === ONLY HEALTHER STAY CHECKING ===
     private func isStayOnlyHealther() -> Bool {
@@ -63,9 +54,7 @@ class Game {
             }
         }
         return false
-    }//====================================
-    
-    
+    }
     
     //=== LIFE CHARACTER CHECKING ===
     private func isCharacterAlive (character: Character) -> Bool {
@@ -85,9 +74,7 @@ class Game {
             return false
         }
         return true
-    }//==============================
-    
-    
+    }
     
     //=== DISPLAY WINNER STATISTICS ===
     private func displayWinner() {
@@ -99,13 +86,10 @@ class Game {
         print("Nombre de tours : \(numberOfTurns)")
         winner.displayTeam()
         print("»~._.~\"~._.~\"~._.~\"~._.~")
-    }//=========================
-    
-    
+    }
     
     //=== ONE TURN ===
     private func turnOfPlayer() {
-        //let randomNumb = Int.random(in: 2...10)
         print("\n\(players[0].name) Quel équipier doit agir ? (Tapez son numéro)\n____________")
         for i in 1...players[0].team.count {
             print("\(i). \(players[0].team[i-1].presentation())")
@@ -117,18 +101,15 @@ class Game {
                 if numberOfTurns == Int.random(in: 2...10) {
                     emitter.findingChest(character: emitter)
                 }
-          // make action on receiver
-          actOnReceiver(emitter: emitter)
+                // make action on receiver
+                actOnReceiver(emitter: emitter)
             } else {
                 turnOfPlayer()
             }
-        }/* end if let emitter*/else {
+        } else {
             turnOfPlayer()
         }
-    }//================
-    
-    
-    
+    }
     
     //=== ACTION ON RECEIVER ===
     private func actOnReceiver(emitter: Character) {
@@ -148,32 +129,30 @@ class Game {
         // is receiver don't nil and alive
         if let receiver = players[indexPlayer].selectCharacter() {
             if isCharacterAlive(character: receiver) {
-              // make action on receiver
-              emitter.actionOn(characterReceiver: receiver)
+                // make action on receiver
+                emitter.actionOn(characterReceiver: receiver)
                 if isCharacterAlive(character: receiver) {
                     // if the character act on his-self
                     var nameReceiver: String {
                         get {
-                         if receiver.type == emitter.type {
-                             if receiver.type == "sorcière" {
-                                return "d'elle-même"
-                             } else if receiver.type == "mage" {
-                                return "de lui-même"
-                             }
+                            if receiver.type == emitter.type {
+                                if receiver.type == "sorcière" {
+                                    return "d'elle-même"
+                                } else if receiver.type == "mage" {
+                                    return "de lui-même"
+                                }
                             }
-                                return "de \(receiver.name)"
-                          }
+                            return "de \(receiver.name)"
                         }
+                    }
                     print ("\(emitter.name) s'est occupé \(nameReceiver). ---> Points de vie restants pour \(receiver.name) : \(receiver.life)\n")}
-             } else {
+            } else {
                 actOnReceiver(emitter: emitter)
             }
-        }/* if let receiver*/ else {
+        } else {
             actOnReceiver(emitter: emitter)
         }
-    }//==========================
+    }
     
     
-    
-    
-}//=== END GAME CLASS ===
+}

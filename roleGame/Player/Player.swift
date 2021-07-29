@@ -22,7 +22,6 @@ final class Player {
         self.name = name
     }
     
-
     //=== PRESENTATION OF AVAILABLE CHARACTER ===
     private func presentAllCharacters() -> String {
         return "\n1.  \(Pirate.presentationMenu())"
@@ -31,14 +30,11 @@ final class Player {
             + "\n4.  \(Fishman.presentationMenu())"
             + "\n5.  \(Sorcerer.presentationMenu())"
             + "\n6.  \(Mate.presentationMenu())"
-    }//===========================================
-    
-    
-    
+    }
     
     //=== CREATE THE TEAM ===
     func createTeams(player1Team: [Character]) {
-
+        
         var isValidChoice = true
         
         while self.team.count < 3 {
@@ -81,18 +77,15 @@ final class Player {
                         print("--- Choisissez un personnage de la liste en tapant son numéro. ---")
                         isValidChoice = false
                     }
-                }//end if let readline()
+                }
             } while !isValidChoice
             
             print(" \n______________⚓️_______________\n  Membres de l'équipage : \(self.team.count)/3\n_______________________________\n")
             selectCharacterName(player1Team: player1Team)
-        }// fin boucle while
+        }
         print("______ ☠️ Votre équipage est au complet ☠️ ______\n\n")
         AsciiArt.drawBoat()
-    }//=======================
-    
-    
-    
+    }
     
     //=== NAME VALID CHECKING ===
     private func isValidName(nameEntry: String, player1Team: [Character]) -> Bool {
@@ -103,10 +96,7 @@ final class Player {
             }
         }
         return true
-    }//==========================
-    
-    
-    
+    }
     
     // === GIVE A NAME AT THE CHARACTER ===
     private func selectCharacterName(player1Team: [Character]) {
@@ -138,10 +128,7 @@ final class Player {
             print("Ce nom n'est pas valide.")
             selectCharacterName(player1Team: player1Team)
         }
-    }//=====================================
-    
-    
-    
+    }
     
     //====== DISPLAYING THE TEAM ======
     func displayTeam() {
@@ -150,10 +137,7 @@ final class Player {
             print("=> \(eachCharacterP.presentation()) ")
         }
         print("----------------------------------------\n\n")
-    }//================================
-    
-    
-    
+    }
     
     //=== SELECT A CHARACTER ===
     func selectCharacter() -> Character? {
@@ -171,11 +155,8 @@ final class Player {
             }
         }
         return nil
-    }//==========================
+    }
     
     
-    
-
-    
-}//=== END PLAYER CLASS ===
+}
 

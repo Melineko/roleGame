@@ -8,7 +8,9 @@
 import Foundation
 
 final class MagicSkullhead: Weapon {
+    
     init() {
         super.init(name: "Crâne magique", damage: 70)
     }
+    
 }

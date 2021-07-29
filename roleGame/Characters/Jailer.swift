@@ -13,13 +13,10 @@ final class Jailer: Character {
         super.init(name: "Géolier", life: 120, lifeMax: 120, weapon: Canonball(), type: "géolier", fonction: "Combattant")
     }
     
-    
-    
     //=== JAILER INITIAL PRESENTATION ===
     static func presentationMenu() -> String {
         return "☍ Géolier (Combattant) ---> Points de vie : 120 - Arme : Boulet - Dégâts : 45"
-    }//==================================
+    }
     
     
-    
-}//=== END JAILER CLASS ===
+}
