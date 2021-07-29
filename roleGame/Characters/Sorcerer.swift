@@ -20,9 +20,9 @@ final class Sorcerer: Character {
     
     //=== Override presentation with healthing specs ===
     override func presentation() -> String {
-        if life > 0{
+        if life > 0 {
             return "\(name) : \(type), \(fonction) ---> Points de vie : \(life) - Objet de soin : \(weapon.name) - Soins : \(weapon.damage)"
-        }else{
+        } else {
             return "\(name) -> ✝︎"
         }
     }

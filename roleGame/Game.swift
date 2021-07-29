@@ -99,7 +99,7 @@ final class Game {
             if isCharacterAlive(character: emitter) {
                 // maybe he finds a chest
                 if numberOfTurns == Int.random(in: 2...10) {
-                    emitter.findingChest(character: emitter)
+                    emitter.findingChest()
                 }
                 // make action on receiver
                 actOnReceiver(emitter: emitter)

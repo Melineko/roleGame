@@ -96,10 +96,10 @@
 				8EC34C72266290A300E4ECBC /* Character.swift */,
 				8EB9A967266AA4F500273B3C /* Pirate.swift */,
 				8E538D70266FC5E200943AD1 /* Jailer.swift */,
-				8E566870268A131C00986B5A /* Witch.swift */,
 				8E566872268A13D700986B5A /* Fichman.swift */,
-				8E566874268A147700986B5A /* Sorcerer.swift */,
 				8E566876268A14AD00986B5A /* Mate.swift */,
+				8E566874268A147700986B5A /* Sorcerer.swift */,
+				8E566870268A131C00986B5A /* Witch.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
