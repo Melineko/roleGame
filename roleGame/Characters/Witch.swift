@@ -10,7 +10,7 @@ import Foundation
 final class Witch: Character {
     
     init() {
-        super.init(name: "Sorcière", life: 75, lifeMax: 75, weapon: MagicSkullhead(), type: "sorcière", fonction: "Soigneur")
+        super.init(name: "Sorcière", life: 85, lifeMax: 85, weapon: MagicSkullhead(), type: "sorcière", fonction: "Soigneur")
     }
     
     //=== WITCH INITIAL PRESENTATION ===

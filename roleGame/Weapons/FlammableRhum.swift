@@ -10,7 +10,7 @@ import Foundation
 final class FlammableRhum: Weapon {
     
     init() {
-        super.init(name: "Rhum incendiaire", damage: 80)
+        super.init(name: "Rhum incendiaire", damage: 50)
     }
     
 }

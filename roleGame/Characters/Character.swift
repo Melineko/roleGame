@@ -44,26 +44,22 @@ class Character {
         print("Vous trouvez un coffre d'armurier. Souhaitez-vous l'ouvrir ?")
         print("1. YES    /    2. NO")
         if let answerPlayer = readLine() {
-            if isPlayerOpensChest(entry: answerPlayer) {
+            if answerPlayer == "2" {
+                print("Ne prenons pas de risques...")
+            } else if answerPlayer == "1" {
+                print("Vous venez de récupérer une dague en or.")
                 self.weapon = BonusWeapon()
                 print(self.presentation())
+            } else {
+                print("Choisissez 1 ou 2.")
+                findingChest()
             }
+        } else {
+            findingChest()
         }
     }
     
-    //=== OPEN THE CHEST OR NOT ===
-    private func isPlayerOpensChest(entry: String)-> Bool {
-        if entry == "2" {
-            print("Ne prenons pas de risques...")
-            return false
-        } else if entry == "1" {
-            print("Vous venez de récupérer une dague en or.")
-            return true
-        } else {
-            print("Choisissez 1 ou 2.")
-            findingChest()
-        }
-        return true
-    }
+    
+    
     
 }

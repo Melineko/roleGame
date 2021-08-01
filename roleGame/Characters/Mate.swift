@@ -10,7 +10,7 @@ import Foundation
 final class Mate: Character {
     
     init() {
-        super.init(name: "Moussaillon", life: 40, lifeMax: 40, weapon: FlammableRhum(), type: "moussaillon", fonction: "Combattant")
+        super.init(name: "Moussaillon", life: 70, lifeMax: 70, weapon: FlammableRhum(), type: "moussaillon", fonction: "Combattant")
     }
     
     //=== FICHMAN INITIAL PRESENTATION ===

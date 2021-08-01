@@ -10,7 +10,7 @@ import Foundation
 final class Harpoon: Weapon {
     
     init() {
-        super.init(name: "Harpon", damage: 28)
+        super.init(name: "Harpon", damage: 35)
     }
     
 }
